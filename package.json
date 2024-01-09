@@ -2,7 +2,7 @@
   "name": "consult-cue-api",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Consult Cue Content Manager",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -24,7 +24,7 @@
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Monica Morais Marques @mmmonica50"
   },
   "strapi": {
     "uuid": "2b902aad-86ea-443c-ad25-f54b0a83c167"
