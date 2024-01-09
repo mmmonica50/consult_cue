@@ -27,6 +27,8 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
+      - key: API_TOKEN
+        generateValue: true
 
 databases:
   - name: consult_cue_api
