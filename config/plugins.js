@@ -1,17 +1,33 @@
-module.exports = ({ env }) => ({
-  admin: {
-    auth: {
-      secret: env("ADMIN_JWT_SECRET"),
-    },
-  },
-  upload: {
-    config: {
-      provider: "cloudinary",
-      providerOptions: {
-        cloud_name: env('CLOUDINARY_NAME'),
-        api_key: env('CLOUDINARY_KEY'),
-        api_secret: env('CLOUDINARY_SECRET')
+module.exports = ({ env }) => {
+  return ({
+    admin: {
+      auth: {
+        secret: env("ADMIN_JWT_SECRET"),
       },
+    },
+    upload: {
+      config: {
+        provider: "cloudinary",
+        providerOptions: {
+          cloud_name: env('CLOUDINARY_NAME'),
+          api_key: env('CLOUDINARY_KEY'),
+          api_secret: env('CLOUDINARY_SECRET')
+        },
+        actionOptions: {
+          upload: {},
+          uploadStream: {},
+          delete: {},
+        },
+      }
+    },
+    graphql: {
+      enabled: true,
+      config: {
+        playgroundAlways: true
+      }
+    },
+    "apollo-sandbox": {
+      enabled: process.env.NODE_ENV !== "production",
     }
-  }
-});
+  });
+}
