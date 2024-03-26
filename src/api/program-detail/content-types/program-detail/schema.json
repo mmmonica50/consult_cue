@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "program_details",
+  "info": {
+    "singularName": "program-detail",
+    "pluralName": "program-details",
+    "displayName": "Program detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.main-title-block"
+    },
+    "Body": {
+      "type": "blocks",
+      "required": true
+    },
+    "Date": {
+      "type": "date"
+    }
+  }
+}
