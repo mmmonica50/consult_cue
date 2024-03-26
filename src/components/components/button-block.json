@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_button_blocks",
+  "info": {
+    "displayName": "BUTTON:SUBTITLE:BLOCK",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "string"
+    }
+  }
+}

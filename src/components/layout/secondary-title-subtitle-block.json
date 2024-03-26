@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_layout_secondary_title_subtitle_blocks",
+  "info": {
+    "displayName": "SECONDARY:TITLE:SUBTITLE:BLOCK",
+    "icon": "quote"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 140
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Inverse": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Align": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ],
+      "default": "left",
+      "required": true
+    }
+  }
+}

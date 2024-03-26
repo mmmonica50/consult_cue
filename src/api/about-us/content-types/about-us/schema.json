@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About Us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Body": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.main-title-block",
+        "layout.secondary-title-subtitle-block",
+        "layout.title-text-block",
+        "layout.buttons-grid-block"
+      ],
+      "required": true
+    }
+  }
+}
