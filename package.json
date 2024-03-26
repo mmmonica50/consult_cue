@@ -9,9 +9,10 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
+    "@creazy231/strapi-plugin-apollo-sandbox": "^0.0.13",
     "@strapi/plugin-cloud": "4.16.2",
+    "@strapi/plugin-graphql": "4.16.2",
     "@strapi/plugin-i18n": "4.16.2",
     "@strapi/plugin-users-permissions": "4.16.2",
     "@strapi/provider-upload-cloudinary": "^4.16.2",
