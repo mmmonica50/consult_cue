@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_layout_main_title_blocks",
+  "info": {
+    "displayName": "MAIN:TITLE:SUBTITLE:BLOCK",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Inverse": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Align": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ],
+      "required": true,
+      "default": "left"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_layout_title_text_blocks",
+  "info": {
+    "displayName": "TITLE:TEXT:SUBTITLE:BLOCK",
+    "icon": "layer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 140
+    },
+    "Text": {
+      "type": "blocks",
+      "required": true
+    },
+    "Inverse": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Align": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ],
+      "default": "left",
+      "required": true
+    }
+  }
+}

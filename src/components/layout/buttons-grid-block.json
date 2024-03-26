@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_buttons_grid_blocks",
+  "info": {
+    "displayName": "BUTTONS:GRID:BLOCK",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.button-block"
+    }
+  }
+}
