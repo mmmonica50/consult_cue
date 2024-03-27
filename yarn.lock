@@ -5842,6 +5842,7 @@ __metadata:
     "@strapi/strapi": "npm:4.16.2"
     better-sqlite3: "npm:8.6.0"
     mysql: "npm:^2.18.1"
+    pg-connection-string: "npm:^2.6.2"
     react: "npm:^18.0.0"
     react-dom: "npm:^18.0.0"
     react-router-dom: "npm:5.3.4"
@@ -11377,6 +11378,13 @@ __metadata:
   version: 2.6.1
   resolution: "pg-connection-string@npm:2.6.1"
   checksum: e5a71a2da143b8dc17143a9db7737679b210643771aa678d3bc60c7bc70da11bbb8e2d531be91c8c4eddd6ac6046307811e793f5850b9ba595a11785c948a417
+  languageName: node
+  linkType: hard
+
+"pg-connection-string@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "pg-connection-string@npm:2.6.2"
+  checksum: e8fdea74fcc8bdc3d7c5c6eadd9425fdba7e67fb7fe836f9c0cecad94c8984e435256657d1d8ce0483d1fedef667e7a57e32449a63cb805cb0289fc34b62da35
   languageName: node
   linkType: hard
 
