@@ -1,28 +1,30 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "program_details",
   "info": {
     "singularName": "program-detail",
     "pluralName": "program-details",
-    "displayName": "Program detail",
-    "description": ""
+    "displayName": "Program detail"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "Ttitle": {
       "type": "component",
       "repeatable": false,
       "component": "layout.main-title-block"
     },
     "Body": {
-      "type": "blocks",
+      "type": "dynamiczone",
+      "components": [
+        "layout.buttons-grid-block",
+        "layout.main-title-block",
+        "layout.secondary-title-subtitle-block",
+        "layout.title-text-block"
+      ],
       "required": true
-    },
-    "Date": {
-      "type": "date"
     }
   }
 }

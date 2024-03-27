@@ -879,21 +879,27 @@ export interface ApiProgramProgram extends Schema.SingleType {
   };
 }
 
-export interface ApiProgramDetailProgramDetail extends Schema.SingleType {
+export interface ApiProgramDetailProgramDetail extends Schema.CollectionType {
   collectionName: 'program_details';
   info: {
     singularName: 'program-detail';
     pluralName: 'program-details';
     displayName: 'Program detail';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.Component<'layout.main-title-block'>;
-    Body: Attribute.Blocks & Attribute.Required;
-    Date: Attribute.Date;
+    Ttitle: Attribute.Component<'layout.main-title-block'>;
+    Body: Attribute.DynamicZone<
+      [
+        'layout.buttons-grid-block',
+        'layout.main-title-block',
+        'layout.secondary-title-subtitle-block',
+        'layout.title-text-block'
+      ]
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
