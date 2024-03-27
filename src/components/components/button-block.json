@@ -17,6 +17,11 @@
     },
     "Subtitle": {
       "type": "string"
+    },
+    "External_link": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

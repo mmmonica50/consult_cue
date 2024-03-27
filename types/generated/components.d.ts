@@ -11,6 +11,9 @@ export interface ComponentsButtonBlock extends Schema.Component {
     Text: Attribute.String & Attribute.Required;
     Link: Attribute.String & Attribute.Required;
     Subtitle: Attribute.String;
+    External_link: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
   };
 }
 

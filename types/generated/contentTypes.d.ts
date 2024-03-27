@@ -812,18 +812,21 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     singularName: 'homepage';
     pluralName: 'homepages';
     displayName: 'Homepage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 140;
-      }>;
-    Subtitle: Attribute.Text;
-    Header_image: Attribute.Media;
+    Body: Attribute.DynamicZone<
+      [
+        'layout.buttons-grid-block',
+        'layout.main-title-block',
+        'layout.secondary-title-subtitle-block',
+        'layout.title-text-block'
+      ]
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
