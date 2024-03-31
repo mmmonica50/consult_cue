@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_uses",
+  "info": {
+    "singularName": "contact-us",
+    "pluralName": "contact-uses",
+    "displayName": "Contact US",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.main-title-block"
+    },
+    "Body": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.buttons-grid-block",
+        "layout.secondary-title-subtitle-block",
+        "layout.title-text-block"
+      ],
+      "required": true
+    },
+    "Form": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
