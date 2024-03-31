@@ -4,18 +4,24 @@
   "info": {
     "singularName": "program",
     "pluralName": "programs",
-    "displayName": "Programs"
+    "displayName": "Programs",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
+    "Title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.main-title-block",
+      "required": true
+    },
     "Body": {
       "type": "dynamiczone",
       "components": [
         "layout.buttons-grid-block",
-        "layout.main-title-block",
         "layout.secondary-title-subtitle-block",
         "layout.title-text-block"
       ],
