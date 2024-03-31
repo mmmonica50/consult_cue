@@ -4,18 +4,24 @@
   "info": {
     "singularName": "workshop",
     "pluralName": "workshops",
-    "displayName": "Workshops"
+    "displayName": "Workshops",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
+    "Title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.main-title-block",
+      "required": true
+    },
     "Body": {
       "type": "dynamiczone",
       "components": [
         "layout.buttons-grid-block",
-        "layout.main-title-block",
         "layout.secondary-title-subtitle-block",
         "layout.title-text-block"
       ],

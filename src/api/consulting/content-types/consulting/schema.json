@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "about_uses",
+  "collectionName": "consultings",
   "info": {
-    "singularName": "about-us",
-    "pluralName": "about-uses",
-    "displayName": "About Us",
-    "description": ""
+    "singularName": "consulting",
+    "pluralName": "consultings",
+    "displayName": "Consulting"
   },
   "options": {
     "draftAndPublish": false
@@ -15,8 +14,7 @@
     "Title": {
       "type": "component",
       "repeatable": false,
-      "component": "layout.main-title-block",
-      "required": true
+      "component": "layout.main-title-block"
     },
     "Body": {
       "type": "dynamiczone",

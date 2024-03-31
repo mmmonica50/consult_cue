@@ -990,12 +990,12 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
     draftAndPublish: false;
   };
   attributes: {
+    Title: Attribute.Component<'layout.main-title-block'> & Attribute.Required;
     Body: Attribute.DynamicZone<
       [
-        'layout.main-title-block',
+        'layout.buttons-grid-block',
         'layout.secondary-title-subtitle-block',
-        'layout.title-text-block',
-        'layout.buttons-grid-block'
+        'layout.title-text-block'
       ]
     > &
       Attribute.Required;
@@ -1016,6 +1016,43 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   };
 }
 
+export interface ApiConsultingConsulting extends Schema.SingleType {
+  collectionName: 'consultings';
+  info: {
+    singularName: 'consulting';
+    pluralName: 'consultings';
+    displayName: 'Consulting';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Title: Attribute.Component<'layout.main-title-block'>;
+    Body: Attribute.DynamicZone<
+      [
+        'layout.buttons-grid-block',
+        'layout.secondary-title-subtitle-block',
+        'layout.title-text-block'
+      ]
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::consulting.consulting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::consulting.consulting',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomepageHomepage extends Schema.SingleType {
   collectionName: 'homepages';
   info: {
@@ -1028,10 +1065,10 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     draftAndPublish: false;
   };
   attributes: {
+    Title: Attribute.Component<'layout.main-title-block'> & Attribute.Required;
     Body: Attribute.DynamicZone<
       [
         'layout.buttons-grid-block',
-        'layout.main-title-block',
         'layout.secondary-title-subtitle-block',
         'layout.title-text-block'
       ]
@@ -1060,15 +1097,16 @@ export interface ApiProgramProgram extends Schema.SingleType {
     singularName: 'program';
     pluralName: 'programs';
     displayName: 'Programs';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
+    Title: Attribute.Component<'layout.main-title-block'> & Attribute.Required;
     Body: Attribute.DynamicZone<
       [
         'layout.buttons-grid-block',
-        'layout.main-title-block',
         'layout.secondary-title-subtitle-block',
         'layout.title-text-block'
       ]
@@ -1136,15 +1174,16 @@ export interface ApiWorkshopWorkshop extends Schema.SingleType {
     singularName: 'workshop';
     pluralName: 'workshops';
     displayName: 'Workshops';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
+    Title: Attribute.Component<'layout.main-title-block'> & Attribute.Required;
     Body: Attribute.DynamicZone<
       [
         'layout.buttons-grid-block',
-        'layout.main-title-block',
         'layout.secondary-title-subtitle-block',
         'layout.title-text-block'
       ]
@@ -1228,6 +1267,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::consulting.consulting': ApiConsultingConsulting;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::program.program': ApiProgramProgram;
       'api::program-detail.program-detail': ApiProgramDetailProgramDetail;
