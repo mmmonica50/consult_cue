@@ -1053,6 +1053,45 @@ export interface ApiConsultingConsulting extends Schema.SingleType {
   };
 }
 
+export interface ApiContactUsContactUs extends Schema.SingleType {
+  collectionName: 'contact_uses';
+  info: {
+    singularName: 'contact-us';
+    pluralName: 'contact-uses';
+    displayName: 'Contact US';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Title: Attribute.Component<'layout.main-title-block'>;
+    Body: Attribute.DynamicZone<
+      [
+        'layout.buttons-grid-block',
+        'layout.secondary-title-subtitle-block',
+        'layout.title-text-block'
+      ]
+    > &
+      Attribute.Required;
+    Form: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-us.contact-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomepageHomepage extends Schema.SingleType {
   collectionName: 'homepages';
   info: {
@@ -1268,6 +1307,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::consulting.consulting': ApiConsultingConsulting;
+      'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::program.program': ApiProgramProgram;
       'api::program-detail.program-detail': ApiProgramDetailProgramDetail;
