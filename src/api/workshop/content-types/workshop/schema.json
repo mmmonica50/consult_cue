@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "workshops",
+  "info": {
+    "singularName": "workshop",
+    "pluralName": "workshops",
+    "displayName": "Workshops"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Body": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.buttons-grid-block",
+        "layout.main-title-block",
+        "layout.secondary-title-subtitle-block",
+        "layout.title-text-block"
+      ],
+      "required": true
+    }
+  }
+}

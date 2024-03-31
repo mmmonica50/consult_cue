@@ -1097,6 +1097,7 @@ export interface ApiProgramDetailProgramDetail extends Schema.CollectionType {
     singularName: 'program-detail';
     pluralName: 'program-details';
     displayName: 'Program detail';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1106,7 +1107,6 @@ export interface ApiProgramDetailProgramDetail extends Schema.CollectionType {
     Body: Attribute.DynamicZone<
       [
         'layout.buttons-grid-block',
-        'layout.main-title-block',
         'layout.secondary-title-subtitle-block',
         'layout.title-text-block'
       ]
@@ -1123,6 +1123,81 @@ export interface ApiProgramDetailProgramDetail extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::program-detail.program-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWorkshopWorkshop extends Schema.SingleType {
+  collectionName: 'workshops';
+  info: {
+    singularName: 'workshop';
+    pluralName: 'workshops';
+    displayName: 'Workshops';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Body: Attribute.DynamicZone<
+      [
+        'layout.buttons-grid-block',
+        'layout.main-title-block',
+        'layout.secondary-title-subtitle-block',
+        'layout.title-text-block'
+      ]
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::workshop.workshop',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::workshop.workshop',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWorkshopDetailWorkshopDetail extends Schema.CollectionType {
+  collectionName: 'workshop_details';
+  info: {
+    singularName: 'workshop-detail';
+    pluralName: 'workshop-details';
+    displayName: 'Workshop detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.Component<'layout.main-title-block'>;
+    Body: Attribute.DynamicZone<
+      [
+        'layout.buttons-grid-block',
+        'layout.secondary-title-subtitle-block',
+        'layout.title-text-block'
+      ]
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::workshop-detail.workshop-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::workshop-detail.workshop-detail',
       'oneToOne',
       'admin::user'
     > &
@@ -1156,6 +1231,8 @@ declare module '@strapi/types' {
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::program.program': ApiProgramProgram;
       'api::program-detail.program-detail': ApiProgramDetailProgramDetail;
+      'api::workshop.workshop': ApiWorkshopWorkshop;
+      'api::workshop-detail.workshop-detail': ApiWorkshopDetailWorkshopDetail;
     }
   }
 }

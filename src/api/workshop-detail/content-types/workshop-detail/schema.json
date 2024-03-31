@@ -1,18 +1,17 @@
 {
   "kind": "collectionType",
-  "collectionName": "program_details",
+  "collectionName": "workshop_details",
   "info": {
-    "singularName": "program-detail",
-    "pluralName": "program-details",
-    "displayName": "Program detail",
-    "description": ""
+    "singularName": "workshop-detail",
+    "pluralName": "workshop-details",
+    "displayName": "Workshop detail"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Ttitle": {
+    "Title": {
       "type": "component",
       "repeatable": false,
       "component": "layout.main-title-block"
