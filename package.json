@@ -24,10 +24,12 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
+    "strapi-plugin-navigation": "^2.4.0",
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "Monica Morais Marques @mmmonica50"
+    "name": "Monica Morais Marques @mmmonica50",
+    "email": "mmmonica50@gmail.com"
   },
   "strapi": {
     "uuid": "2b902aad-86ea-443c-ad25-f54b0a83c167"
