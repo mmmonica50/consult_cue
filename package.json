@@ -10,15 +10,12 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@creazy231/strapi-plugin-apollo-sandbox": "^0.0.13",
-    "@strapi/data-transfer": "^4.24.0",
     "@strapi/plugin-cloud": "4.24.0",
     "@strapi/plugin-graphql": "4.24.0",
     "@strapi/plugin-i18n": "4.24.0",
     "@strapi/plugin-users-permissions": "4.24.0",
-    "@strapi/provider-upload-cloudinary": "^4.24.0",
+    "@strapi/provider-upload-cloudinary": "4.24.0",
     "@strapi/strapi": "4.24.0",
-    "better-sqlite3": "8.6.0",
     "mysql": "^2.18.1",
     "pg": "^8.11.3",
     "pg-connection-string": "^2.6.2",
@@ -36,8 +33,7 @@
     "uuid": "2b902aad-86ea-443c-ad25-f54b0a83c167"
   },
   "engines": {
-    "node": ">=18.0.0 <=20.x.x",
-    "npm": ">=6.0.0"
+    "node": ">=20.0.0 <=22.x.x"
   },
   "license": "MIT"
 }
