@@ -8,7 +8,7 @@ services:
     healthCheckPath: /_health
     envVars:
       - key: NODE_VERSION
-        value: 18.19.0
+        value: 20.11.0
       - key: NODE_ENV
         value: production
       - key: CLOUDINARY_NAME
@@ -29,7 +29,33 @@ services:
         generateValue: true
       - key: API_TOKEN_SALT
         generateValue: true
+  - type: web
+    name: consult-cue-staging-api
+    env: node
+    plan: starter
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    healthCheckPath: /_health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: NODE_ENV
+        value: staging
+      - key: DATABASE_URL
+        fromDatabase:
+          name: consult_cue_staging_api
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
 
 databases:
   - name: consult_cue_api
+    plan: starter
+  - name: consult_cue_staging_api
     plan: starter
