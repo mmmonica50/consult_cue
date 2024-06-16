@@ -28,9 +28,6 @@ module.exports = ({ env }) => {
       config: {
         playgroundAlways: true
       }
-    },
-    "apollo-sandbox": {
-      enabled: process.env.NODE_ENV !== "production",
     }
   });
 }
